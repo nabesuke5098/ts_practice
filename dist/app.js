@@ -15,4 +15,7 @@ const add = (...numbers) => {
 };
 const addedNumbers = add(5, 10, 2, 3.5);
 console.log(addedNumbers);
+const hobbies = ["Running", "Workout"];
+const [hobby1, hobby2] = hobbies;
+console.log(hobbies, hobby1, hobby2);
 //# sourceMappingURL=app.js.map
