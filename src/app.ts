@@ -9,16 +9,25 @@ age = 29;
 //   return result;
 // }
 
-const add = (a: number, b: number) => a + b;
+// const add = (a: number, b: number) => a + b;
 
-const printOutput: (output: string | number) => void => output => {
-  console.log(output);
-}
+// const printOutput: (output: string | number) => void => output => {
+//   console.log(output);
+// }
 
 const button = document.querySelector("button");
 
 if (button) {
-  button.addEventListener("click", event => {
+  button.addEventListener("click", (event) => {
     console.log(event);
-  })
+  });
 }
+
+const add = (...numbers: number[]) => {
+  return numbers.reduce((curResult, curValue) => {
+    return curResult + curValue;
+  }, 0);
+};
+
+const addedNumbers = add(5, 10, 2, 3.5);
+console.log(addedNumbers);
